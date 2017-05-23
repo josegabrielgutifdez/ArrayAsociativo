@@ -1,7 +1,9 @@
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 
 public class AsocArrayTest {
@@ -95,6 +97,18 @@ public class AsocArrayTest {
 		assertNull(a.tabla.sig);
 		assertTrue(a.remove("nombre"));
 		assertNull(a.tabla.c);
+	}
+	
+	@Rule
+	public ExpectedException e=ExpectedException.none();
+	
+	@Test
+	public void BuscarParYElevaExcepcion(){
+		a.put("nombre","luis");
+		a.put("apellido", "martin");
+		e.expect(UndefinedKeyException.class);
+		e.expectMessage("Negative numbers:-2, -4 ");
+		a.get("nadie");
 	}
 	
 }
