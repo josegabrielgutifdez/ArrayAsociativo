@@ -83,6 +83,16 @@ public class AsocArrayTest {
 		a.put("apellido", "martin");
 		assertEquals(a.size(), 2);
 		
-	}	
+	}
+	
+	@Test
+	public void RemoverParEnTabla() {
+		assertFalse(a.remove("nombre"));//Tabla vacia
+		a.put("nombre","luis");
+		assertFalse(a.remove("nom"));//Tabla con claves distintas
+		a.put("apellido", "martin");
+		assertTrue(a.remove("apellido"));
+		assertNull(a.tabla.sig);
+	}
 	
 }

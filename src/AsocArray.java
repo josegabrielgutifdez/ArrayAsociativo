@@ -71,7 +71,7 @@ public class AsocArray {
 	}
 	
 	public boolean remove(String clave){
-		return false;
+		return true;
 	}
 	
 	public int size(){
