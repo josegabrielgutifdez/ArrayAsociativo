@@ -75,6 +75,14 @@ public class AsocArray {
 	}
 	
 	public int size(){
-		return 0;
+		int cont=0;
+		if(tabla.c!=null){
+			TPar aux=tabla;
+			while(aux!=null){
+				cont++;
+				aux=aux.sig;
+			}
+		}
+		return cont;
 	}
 }
