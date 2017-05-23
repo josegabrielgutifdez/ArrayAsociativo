@@ -44,7 +44,8 @@ public class AsocArray {
 				aux=aux.sig;
 			}
 		}
-		return null;
+		  throw new  UndefinedKeyException();
+		
 	}
 	
 	public String getOrElse(String clave, String valorPorDefecto){

@@ -99,15 +99,13 @@ public class AsocArrayTest {
 		assertNull(a.tabla.c);
 	}
 	
-	@Rule
-	public ExpectedException e=ExpectedException.none();
+
 	
-	@Test
+	@Test(expected= UndefinedKeyException.class)
 	public void BuscarParYElevaExcepcion(){
+		
 		a.put("nombre","luis");
 		a.put("apellido", "martin");
-		e.expect(UndefinedKeyException.class);
-		e.expectMessage("Negative numbers:-2, -4 ");
 		a.get("nadie");
 	}
 	
