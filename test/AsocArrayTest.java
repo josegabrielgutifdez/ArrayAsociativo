@@ -75,4 +75,14 @@ public class AsocArrayTest {
 		assertFalse(a.containsKey("ape"));
 	}
 	
+	@Test
+	public void DelvolverTamañoDeTabla() {
+		assertEquals(a.size(),0);
+		a.put("nombre","luis");
+		assertEquals(a.size(), 1);
+		a.put("apellido", "martin");
+		assertEquals(a.size(), 2);
+		
+	}	
+	
 }
