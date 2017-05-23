@@ -50,4 +50,12 @@ public class AsocArrayTest {
 		assertEquals(n.v,"martin");
 		assertNull(n.sig);
 	}
+	
+	@Test
+	public void BuscarParExistenteEnTabla() {
+		a.put("nombre","luis");
+		a.put("apellido", "martin");
+		assertEquals(a.get("apellido"),"martin");
+		
+	}
 }
