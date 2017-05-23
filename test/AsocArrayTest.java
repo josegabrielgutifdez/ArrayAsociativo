@@ -35,8 +35,8 @@ public class AsocArrayTest {
 		a.put("nombre","luis");
 		a.put("apellido", "martin");
 		TPar n=a.tabla.sig;
-		assertEquals(n.c,"nombre");
-		assertEquals(n.v,"luis");
+		assertEquals(n.c,"apellido");
+		assertEquals(n.v,"martin");
 		assertNull(n.sig);
 		
 	}

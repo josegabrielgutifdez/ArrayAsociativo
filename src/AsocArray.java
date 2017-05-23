@@ -8,8 +8,20 @@ public class AsocArray {
 	}
 	
 	public void put(String clave, String valor){
+		TPar nuevo=new TPar();
+		if(tabla.c==null){
 		tabla.c=clave;
 		tabla.v=valor;
+		}
+		else{
+			TPar aux=tabla;
+			while(aux.sig!=null){
+				aux=aux.sig;
+			}
+			nuevo.c=clave;
+			nuevo.v=valor;
+			aux.sig=nuevo;
+		}
 	}
 	
 	public String get(String clave){
