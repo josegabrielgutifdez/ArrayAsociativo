@@ -8,7 +8,8 @@ public class AsocArray {
 	}
 	
 	public void put(String clave, String valor){
-	
+		tabla.c=clave;
+		tabla.v=valor;
 	}
 	
 	public String get(String clave){
