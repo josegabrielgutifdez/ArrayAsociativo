@@ -93,6 +93,8 @@ public class AsocArrayTest {
 		a.put("apellido", "martin");
 		assertTrue(a.remove("apellido"));
 		assertNull(a.tabla.sig);
+		assertTrue(a.remove("nombre"));
+		assertNull(a.tabla.c);
 	}
 	
 }

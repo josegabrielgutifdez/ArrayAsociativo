@@ -71,7 +71,37 @@ public class AsocArray {
 	}
 	
 	public boolean remove(String clave){
-		return true;
+		boolean esta=false;
+		
+		if(tabla.c!=null){
+			
+			TPar aux=tabla;
+			TPar c=null;
+			
+			while(aux!=null && !esta){
+				
+				if(aux.c==clave){
+					esta=true;
+				}else{
+					c=aux;
+					aux=aux.sig;
+					
+				}
+			}
+			if(esta){
+				if(c==null ){
+					if(tabla.sig==null){
+						tabla.c=null;
+						tabla.v=null;
+					}else{
+						tabla=tabla.sig;
+					}
+				}else{
+					c.sig=aux.sig;
+				}
+			}
+		}
+		return esta;
 	}
 	
 	public int size(){
