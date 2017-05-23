@@ -40,4 +40,14 @@ public class AsocArrayTest {
 		assertNull(n.sig);
 		
 	}
+	
+	@Test
+	public void PonerParNuevoEnTablaConClaveIgual(){
+		a.put("nombre","luis");
+		a.put("nombre", "martin");
+		TPar n=a.tabla;
+		assertEquals(n.c,"nombre");
+		assertEquals(n.v,"martin");
+		assertNull(n.sig);
+	}
 }
