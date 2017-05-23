@@ -48,7 +48,15 @@ public class AsocArray {
 	}
 	
 	public String getOrElse(String clave, String valorPorDefecto){
-		return null;
+		TPar aux=tabla;
+		while(aux!=null){
+			if(aux.c==clave){
+				return aux.v;
+			}else{
+				aux=aux.sig;
+			}
+		}
+		return valorPorDefecto;
 	}
 	
 	public boolean remove(String clave){
