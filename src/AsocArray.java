@@ -59,6 +59,14 @@ public class AsocArray {
 		return valorPorDefecto;
 	}
 	public boolean containsKey(String clave){
+		TPar aux=tabla;
+		while(aux!=null){
+			if(aux.c==clave){
+				return true;
+			}else{
+				aux=aux.sig;
+			}
+		}
 		return false;
 	}
 	
