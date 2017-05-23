@@ -67,4 +67,12 @@ public class AsocArrayTest {
 		assertEquals(a.getOrElse("apellid","otro"),"otro");
 	}
 	
+	@Test
+	public void BuscarClaveEnTabla() {
+		a.put("nombre","luis");
+		a.put("apellido", "martin");
+		assertTrue(a.containsKey("apellido"));
+		assertFalse(a.containsKey("ape"));
+	}
+	
 }

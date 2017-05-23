@@ -58,6 +58,9 @@ public class AsocArray {
 		}
 		return valorPorDefecto;
 	}
+	public boolean containsKey(String clave){
+		return false;
+	}
 	
 	public boolean remove(String clave){
 		return false;
