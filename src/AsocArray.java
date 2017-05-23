@@ -35,6 +35,15 @@ public class AsocArray {
 	}
 	
 	public String get(String clave){
+		String sol=null;
+		TPar aux=tabla;
+		while(aux!=null){
+			if(aux.c==clave){
+				return aux.v;
+			}else{
+				aux=aux.sig;
+			}
+		}
 		return null;
 	}
 	
