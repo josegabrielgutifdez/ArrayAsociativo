@@ -29,4 +29,15 @@ public class AsocArrayTest {
 		assertEquals(a.tabla.v,"luis");
 		assertNull(a.tabla.sig);
 	}
+	
+	@Test
+	public void PonerParNuevoEnTablaConPares() {
+		a.put("nombre","luis");
+		a.put("apellido", "martin");
+		TPar n=a.tabla.sig;
+		assertEquals(n.c,"nombre");
+		assertEquals(n.v,"luis");
+		assertNull(n.sig);
+		
+	}
 }
