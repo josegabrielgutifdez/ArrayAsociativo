@@ -14,13 +14,23 @@ public class AsocArray {
 		tabla.v=valor;
 		}
 		else{
+			TPar c=null;
 			TPar aux=tabla;
-			while(aux.sig!=null){
-				aux=aux.sig;
-			}
+			boolean esta=false;
+			do{
+				if(aux.c==clave){
+					esta=true;
+					aux.v=valor;
+				}else{
+					c=aux;
+					aux=aux.sig;
+				}
+			}while(aux!=null && !esta);
+			if(!esta){	
 			nuevo.c=clave;
 			nuevo.v=valor;
-			aux.sig=nuevo;
+			c.sig=nuevo;
+			}
 		}
 	}
 	
