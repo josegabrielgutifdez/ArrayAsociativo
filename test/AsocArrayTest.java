@@ -58,4 +58,13 @@ public class AsocArrayTest {
 		assertEquals(a.get("apellido"),"martin");
 		
 	}
+	
+	@Test
+	public void BuscarParEnTablaGetOrElse() {
+		a.put("nombre","luis");
+		a.put("apellido", "martin");
+		assertEquals(a.getOrElse("apellido","otro"),"martin");
+		assertEquals(a.getOrElse("apellid","otro"),"otro");
+	}
+	
 }
