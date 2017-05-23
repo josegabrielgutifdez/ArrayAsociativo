@@ -3,7 +3,8 @@ public class AsocArray {
 	public TPar tabla;
 	
 	public AsocArray(){
-		
+		tabla=new TPar();
+		tabla.sig=null;
 	}
 	
 	public void put(String clave, String valor){
